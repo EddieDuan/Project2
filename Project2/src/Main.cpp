@@ -1,13 +1,18 @@
 #include <iostream>
 #include "Log.h"
 
-void Log(const char* message)
-{
-	std::cout << message << std::endl;
-}
+#define LOG(x) std::cout << x <<std::endl
 
 int main()
 {
-	Log("Hello World!");
+	int var = 8;
+	int* ptr = &var;
+	
+	while (*ptr != -1)
+	{
+		std::cin >> *ptr;
+		LOG(*ptr);
+	}
+
 	std::cin.get();
 }
