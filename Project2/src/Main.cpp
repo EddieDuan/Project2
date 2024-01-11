@@ -5,14 +5,8 @@
 
 int main()
 {
-	int var = 8;
-	int* ptr = &var;
-	
-	while (*ptr != -1)
-	{
-		std::cin >> *ptr;
-		LOG(*ptr);
-	}
+	char* buffer = new char[8];
+	memset(buffer,0,8);
 
 	std::cin.get();
 }
